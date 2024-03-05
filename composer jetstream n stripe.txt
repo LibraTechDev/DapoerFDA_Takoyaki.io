@@ -1,0 +1,42 @@
+composer require laravel/jetstream
+php artisan jetstream:install livewire
+npm install
+npm run dev
+ganti user table
+php artisan migrate
+
+
+
+composer require stripe/stripe-php
+buat akun stripe
+ubah env
+buat route
+buat view untuk pembayaran
+controller
+
+
+composer require barryvdh/laravel-dompdf
+ke config/app.php
+
+'providers' => {
+
+Barryvdh\DomPDF\ServiceProvider::class,
+},
+
+'aliases' => {
+
+'PDF' => Barryvdh\DomPDF\Facade::class,
+},
+
+
+
+php artisan notification:table
+php artisan migrate
+php artisan make:notification SendEmailNotification
+
+
+
+composer require realrashid/sweet-alert
+php artisan sweetalert:publish
+@include ('sweetalert::alert')
+use RealRashid\SweetAlert\Facades\Alert;
